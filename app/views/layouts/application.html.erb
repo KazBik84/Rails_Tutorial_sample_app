@@ -2,7 +2,9 @@
 <html>
 <head>
 <!-- :title bedzie wprowadzane dzieki funkcji provide na kazdej stronie -->
-<title><%= yield(:title) %> | Ruby on Rails Tutorial Sample App</title>
+<!--<title><%= yield(:title) %> | Ruby on Rails Tutorial Sample App</title> -->
+<!-- Dzięki funkcji stworzonej w app/helpers/application_helper.rb, wyświetlany będzie tytuł pełny lub tylko domyślny bez '|' który był wcześniej -->
+  <title><%= full_title(yield(:title)) %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
